@@ -2,12 +2,6 @@ import React, { useRef, useEffect, useState, createRef } from "react";
 import { View } from "react-native";
 import OtpInputBox from "./OtpInputBox";
 
-// const NUMBER_OF_CELL = 6;
-
-// let array = [];
-// // refs = [];
-// array.length = 5;
-
 const generateRefs = (NUMBER_OF_CELL) => {
   let arr = [];
   for (let i = 0; i < NUMBER_OF_CELL; i++) {
@@ -16,14 +10,13 @@ const generateRefs = (NUMBER_OF_CELL) => {
   return arr;
 };
 
-const Otp = (props) => {
-  const { numberOfCell: NUMBER_OF_CELL, input, setInput } = props;
+const OtpColumn = (props) => {
+  const { numberOfCell: NUMBER_OF_CELL, value, setOtpValue, style } = props;
   const [colums, setColumns] = useState([]);
   const elementsRef = useRef(
     generateRefs(NUMBER_OF_CELL).map(() => createRef())
   );
-  //   const [input, setInput] = useState(generateRefs(NUMBER_OF_CELL));
-  console.log("Element Ref : ", elementsRef.current.length);
+  const [input, setInput] = useState(value.length > 0 ? value.split("") : []);
 
   useEffect(() => {
     let array = [];
@@ -48,6 +41,8 @@ const Otp = (props) => {
               input={input}
               setInput={setInput}
               numberOfCell={NUMBER_OF_CELL}
+              setOtpValue={setOtpValue}
+              style={style}
             />
           );
         })}
@@ -64,4 +59,4 @@ const Otp = (props) => {
   );
 };
 
-export default Otp;
+export default OtpColumn;

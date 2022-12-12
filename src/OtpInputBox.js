@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { TextInput, StyleSheet } from "react-native";
 
 const OtpInputBox = React.forwardRef((props, ref) => {
-  const { setInput, input, key, index, elementsRef } = props;
+  const { setInput, input, key, index, elementsRef, setOtpValue, style } =
+    props;
   const [number, setNumber] = useState(input[index]);
 
   const onChangeText = (text) => {
@@ -10,6 +11,7 @@ const OtpInputBox = React.forwardRef((props, ref) => {
     let arr = [...input];
     arr[index] = text;
     setInput(arr);
+    setOtpValue(arr.join(""));
   };
 
   const onKeyPress = ({ nativeEvent: { key: keyValue } }) => {
@@ -40,6 +42,7 @@ const OtpInputBox = React.forwardRef((props, ref) => {
       arr[i] = "";
     }
     setInput([...arr]);
+    setOtpValue(arr.join(""));
   };
 
   return (
@@ -53,7 +56,7 @@ const OtpInputBox = React.forwardRef((props, ref) => {
       keyboardType="numeric"
       textAlign="center"
       maxLength={1}
-      style={styles.inputBox}
+      style={{ ...styles.inputBox, ...style }}
     />
   );
 });
