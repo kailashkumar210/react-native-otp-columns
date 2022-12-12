@@ -1,7 +1,13 @@
 # react-native-otp-columns
 
 # Example : 
+`Install package using` 
 
+``` npm i react-native-otp-columns ```
+
+`Use as given in below example `
+
+```
 import React, { useState} from 'react';
 import {View} from 'react-native';
 import OtpColumn from 'react-native-otp-columns';
@@ -22,11 +28,14 @@ const OtpComponent = props => {
 };
 
 export default OtpComponent;
-
+```
 
 # Props: 
 
-numberOfCell
-value
-setOtpValue  
-style
+| Props         |   type       |
+| ------------- | ------------ |
+| numberOfCell  |   Number     |
+| value         |   Number     |
+| setOtpValue   |  function    |
+| style         | style Object |
+

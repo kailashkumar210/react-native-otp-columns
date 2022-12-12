@@ -1,16 +1,26 @@
 {
-  "name": "react-native-otp-columns",
-  "version": "1.0.2",
-  "description": "React Native Otp Input Handler",
+  "name": "react-native-otp-column",
+  "version": "1.0.0",
+  "description": "React Native Otp Columns",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kailashkumar210/react-native-otp-columns.git"
+  },
   "keywords": [
-    "otp"
+    "react-native-otp",
+    "otp-input",
+    "input-box"
   ],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kailashkumar210/react-native-otp-columns/issues"
+  },
+  "homepage": "https://github.com/kailashkumar210/react-native-otp-columns#readme",
   "peerDependencies": {
     "react": "18.1.0",
     "react-native": "0.70.6"
