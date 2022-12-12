@@ -1,0 +1,24 @@
+{
+  "name": "react-native-otp-columns",
+  "version": "1.0.1",
+  "description": "React Native Otp Input Handler",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "otp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.6"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.4",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.4",
+    "react-test-renderer": "16.3.1"
+  }
+}
