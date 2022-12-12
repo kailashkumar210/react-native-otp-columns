@@ -1,11 +1,11 @@
 # react-native-otp-columns
 
-# Example : 
-`Install package using` 
+### Example : 
+> Install package using 
 
-``` npm i react-native-otp-columns ```
+` npm i react-native-otp-columns `
 
-`Use as given in below example `
+> Use as given in below example 
 
 ```
 import React, { useState} from 'react';
@@ -30,7 +30,7 @@ const OtpComponent = props => {
 export default OtpComponent;
 ```
 
-# Props: 
+### Props: 
 
 | Props         |   type       |
 | ------------- | ------------ |
