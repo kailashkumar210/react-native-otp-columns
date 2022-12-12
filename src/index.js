@@ -4,9 +4,9 @@ import OtpInputBox from "./OtpInputBox";
 
 // const NUMBER_OF_CELL = 6;
 
-let array = [];
-// refs = [];
-array.length = 5;
+// let array = [];
+// // refs = [];
+// array.length = 5;
 
 const generateRefs = (NUMBER_OF_CELL) => {
   let arr = [];
@@ -23,6 +23,7 @@ const Otp = (props) => {
     generateRefs(NUMBER_OF_CELL).map(() => createRef())
   );
   //   const [input, setInput] = useState(generateRefs(NUMBER_OF_CELL));
+  console.log("Element Ref : ", elementsRef.current.length);
 
   useEffect(() => {
     let array = [];

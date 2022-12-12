@@ -1,27 +1,27 @@
-import React, {useState} from 'react';
-import {TextInput, StyleSheet} from 'react-native';
+import React, { useState } from "react";
+import { TextInput, StyleSheet } from "react-native";
 
 const OtpInputBox = React.forwardRef((props, ref) => {
-  const {setInput, input, key, index, elementsRef} = props;
+  const { setInput, input, key, index, elementsRef } = props;
   const [number, setNumber] = useState(input[index]);
 
-  const onChangeText = text => {
+  const onChangeText = (text) => {
     setNumber(text);
     let arr = [...input];
     arr[index] = text;
     setInput(arr);
   };
 
-  const onKeyPress = ({nativeEvent: {key: keyValue}}) => {
+  const onKeyPress = ({ nativeEvent: { key: keyValue } }) => {
     let shouldFocus =
-      index + 1 != elementsRef.current.length && keyValue != 'Backspace';
+      index + 1 != elementsRef.current.length && keyValue != "Backspace";
 
     if (shouldFocus) {
       elementsRef.current[index + 1].current.focus();
     }
 
-    if (keyValue == 'Backspace' && index != 0) {
-      setNumber('');
+    if (keyValue == "Backspace" && index != 0) {
+      setNumber("");
       for (let i = index; i < elementsRef.current.length; i++) {
         elementsRef.current[i].current.clear();
       }
@@ -32,12 +32,12 @@ const OtpInputBox = React.forwardRef((props, ref) => {
     }
   };
 
-  const onFocus = e => {
-    setNumber('');
+  const onFocus = (e) => {
+    setNumber("");
     let arr = [...input];
     for (let i = index; i < elementsRef.current.length; i++) {
       elementsRef.current[i].current.clear();
-      arr[i] = '';
+      arr[i] = "";
     }
     setInput([...arr]);
   };
@@ -62,13 +62,13 @@ export default OtpInputBox;
 
 const styles = StyleSheet.create({
   inputBox: {
-    borderColor: 'red',
+    borderColor: "red",
     borderWidth: 1.0,
     height: 50,
     width: 50,
     borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     fontSize: 20,
   },
 });
