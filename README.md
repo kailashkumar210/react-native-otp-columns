@@ -1,16 +1,16 @@
-# react-native-otp-columns
+# react-native-otp-column
 
 ### Example : 
 > Install package using 
 
-` npm i react-native-otp-columns `
+` npm i react-native-otp-column `
 
 > Use as given in below example 
 
 ```
 import React, { useState} from 'react';
 import {View} from 'react-native';
-import OtpColumn from 'react-native-otp-columns';
+import OtpColumn from 'react-native-otp-column';
 
 const OtpComponent = props => {
   const [otp, setOpt] = useState('');
