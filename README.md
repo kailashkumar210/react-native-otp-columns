@@ -1,11 +1,19 @@
 # react-native-otp-column
 
-### Example : 
+### Sample Screenshot
+
+<img src="https://user-images.githubusercontent.com/43596131/207510014-0ea1ec2a-fceb-4816-8708-52bd7d6964ab.png" width="250" height="450">
+
+
+### Guide : 
+
 > Install package using 
 
 ` npm i react-native-otp-column `
 
 > Use as given in below example 
+
+### Example : 
 
 ```
 import React, { useState} from 'react';
