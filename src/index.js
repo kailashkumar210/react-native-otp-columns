@@ -11,7 +11,13 @@ const generateRefs = (NUMBER_OF_CELL) => {
 };
 
 const OtpColumn = (props) => {
-  const { numberOfCell: NUMBER_OF_CELL, value, setOtpValue, style } = props;
+  const {
+    numberOfCell: NUMBER_OF_CELL,
+    value,
+    setOtpValue,
+    style,
+    editable,
+  } = props;
   const [colums, setColumns] = useState([]);
   const elementsRef = useRef(
     generateRefs(NUMBER_OF_CELL).map(() => createRef())
@@ -34,7 +40,8 @@ const OtpColumn = (props) => {
         {colums.map((item, index) => {
           return (
             <OtpInputBox
-              key={"KEY_" + index}
+              key={"UNIQUE_KEY_" + index}
+              testId={"KEY_" + index}
               index={index}
               ref={elementsRef.current[index]}
               elementsRef={elementsRef}
@@ -43,6 +50,7 @@ const OtpColumn = (props) => {
               numberOfCell={NUMBER_OF_CELL}
               setOtpValue={setOtpValue}
               style={style}
+              editable={editable}
             />
           );
         })}
