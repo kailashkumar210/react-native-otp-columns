@@ -29,6 +29,7 @@ const OtpComponent = props => {
           numberOfCell={6} 
           value={otp} 
           setOtpValue={setOpt} 
+          //editable={false}
           style={{borderColor: 'black', borderWidth: 4, borderRadius: 20}}
       />
     </View>
@@ -40,10 +41,11 @@ export default OtpComponent;
 
 ### Props: 
 
-| Props         |   type       |
-| ------------- | ------------ |
-| numberOfCell  |   Number     |
-| value         |   Number     |
-| setOtpValue   |  function    |
-| style         | style Object |
+| Props         |   type       |  Default  |
+| ------------- | ------------ | --------- |
+| numberOfCell  |   Number     |  required as props |
+| value         |   Number     |  required state value |
+| setOtpValue   |  function    | required state setter function |
+| style         | style Object | Object |
+| editable      | Boolean | true |
 
